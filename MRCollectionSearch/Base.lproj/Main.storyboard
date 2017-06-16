@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jvW-bc-Sib">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MRCollectionSearchVC" customModule="MRCollectionSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg6-pC-imk">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dMe-dH-2no"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="05r-3N-HNw">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="u4R-us-3LB">
+                                    <size key="itemSize" width="145" height="141"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellItem" id="Nkk-vw-Tu2" customClass="CollectionSearchCell" customModule="MRCollectionSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="BOA-QV-VLt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="141"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egale Boy's Pizza" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crX-R4-T1D">
+                                                    <rect key="frame" x="0.0" y="107" width="145" height="34"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.43338401845637586" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="PKu-6z-TiV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="BOA-QV-VLt" firstAttribute="leading" secondItem="Nkk-vw-Tu2" secondAttribute="leading" id="57j-cB-Bna"/>
+                                            <constraint firstAttribute="trailing" secondItem="BOA-QV-VLt" secondAttribute="trailing" id="DWH-l7-aYJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="BOA-QV-VLt" secondAttribute="bottom" id="XtL-ap-rG1"/>
+                                            <constraint firstItem="crX-R4-T1D" firstAttribute="leading" secondItem="Nkk-vw-Tu2" secondAttribute="leading" id="eUS-qo-fa0"/>
+                                            <constraint firstAttribute="trailing" secondItem="crX-R4-T1D" secondAttribute="trailing" id="m3N-Dy-HQC"/>
+                                            <constraint firstItem="BOA-QV-VLt" firstAttribute="top" secondItem="Nkk-vw-Tu2" secondAttribute="top" id="n6p-XS-uTy"/>
+                                            <constraint firstAttribute="bottom" secondItem="crX-R4-T1D" secondAttribute="bottom" id="svI-aq-yKZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImage" destination="BOA-QV-VLt" id="im9-6u-XZG"/>
+                                            <outlet property="itemTitle" destination="crX-R4-T1D" id="uR3-4q-KQy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jUV-mJ-dIz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yhA-JR-Cte"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xg6-pC-imk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="881-ng-Knd"/>
+                            <constraint firstItem="05r-3N-HNw" firstAttribute="top" secondItem="xg6-pC-imk" secondAttribute="bottom" id="Jss-6v-j5n"/>
+                            <constraint firstItem="xg6-pC-imk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LAV-1k-WGN"/>
+                            <constraint firstAttribute="trailing" secondItem="05r-3N-HNw" secondAttribute="trailing" id="TM2-19-v4Q"/>
+                            <constraint firstItem="05r-3N-HNw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bIt-YB-Jd7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="05r-3N-HNw" secondAttribute="bottom" id="oRV-yW-cwz"/>
+                            <constraint firstItem="xg6-pC-imk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qkv-Cz-sC7"/>
+                            <constraint firstAttribute="trailing" secondItem="xg6-pC-imk" secondAttribute="trailing" id="vVw-jY-5fw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pizza" id="Bg8-Y8-XUM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="05r-3N-HNw" id="cnp-VR-Ite"/>
+                        <outlet property="searchBar" destination="xg6-pC-imk" id="fGW-v7-ysi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.39999999999998" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oTp-J8-FQf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvW-bc-Sib" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Hh-al-vR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eGQ-1m-8qB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUI-dg-h4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza" width="300" height="168"/>
+    </resources>
+</document>
